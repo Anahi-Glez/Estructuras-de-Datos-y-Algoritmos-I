@@ -1,1 +1,8 @@
+#include <stdio.h>
 
+int main()
+{
+    printf("\n\n\tHola mundo OwO\n\n");
+
+    return 0;
+}
