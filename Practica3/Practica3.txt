@@ -14,9 +14,9 @@ int main (void) {
     struct pelicula videoteca[MAX];
     int n;
     
-    printf("Cuantas peliculas quieres guardar, maximo %d :  ",MAX);
+    printf("\n\nCuantas peliculas quieres guardar, maximo %d :  ",MAX);
     scanf("%d",&n);
-    if (n=1 && n<MAX ){
+    if (n<MAX ){
         for(int i=0; i<n; i++){
             printf("\nIngrese el nombre de la pelicula %d :   ",i+1);
             scanf("%s",&videoteca[i].nombre);
@@ -30,7 +30,11 @@ int main (void) {
             printf("\n");
         }
     
-    
+    }
+    else {
+        printf("\n\t\tOpcion invalida");
+        return 0;
+    }
     
     
     for(int i= n-1 ; i>=0; i--){
@@ -110,12 +114,6 @@ int main (void) {
         
         default: return 0;
         
-    }
-    }
-    
-    else {
-        printf("\n\t\tOpcion invalida");
-        return 0;
     }
     
 }
