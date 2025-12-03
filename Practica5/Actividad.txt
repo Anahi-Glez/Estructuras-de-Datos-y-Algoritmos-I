@@ -1,0 +1,13 @@
+Actividad
+
+1. ¿Qué diferencias notaron entre el orden de salida de la pila y de la cola?
+la pila saca el ulitmo elemento en entrar, mientras que para una cola, la operacion de desencolar, 
+lo hara desde el primer elemnto 
+
+2. ¿Qué sucede si intentan hacer pop en una pila vacía o dequeue en una cola vacía?
+en una pila vacia, muestra que la pila esta vacia, si se intenta hacer dequeue en una cola vacia, 
+no se puede por que no hya elementos a desencolar
+
+3. ¿Qué sucede si intentan insertar más elementos que la capacidad máxima?
+No se podria insertar mas elementos, debido a la restriccion, que es que los elemenos a leer
+sea simepre menor a nuestro MAX, que en ambos casos se deifne como 5
