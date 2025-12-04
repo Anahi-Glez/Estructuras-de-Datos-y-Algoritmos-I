@@ -1,0 +1,13 @@
+Preguntas
+1. ¿Por qué en la cola circular no se desperdician posiciones como en la cola lineal?
+Por que el puntero de final, al llegar al maximo, este apuntara al primer elemento
+de la cola
+
+2. ¿Qué pasa cuando el índice final llega al final del arreglo?
+Va a apuntar al frente, y posteriormente hara la asignacion en los siguientes indices
+
+3. ¿Qué sucede si intentas encolar cuando la cola está llena?
+Se puede mostrar mediante un mensaje que la cola circular esta llena y que se van a 
+reasignar los indices, el primero como el ultimo y el frente se va a mover al segundo elemento, 
+si se desea insertar mas, el final apuntara al segundo elemento y el frente apuntara al 
+tercer elemento y asi sucesivamente
