@@ -39,13 +39,15 @@ int enqueue(struct ColaCircular *colac, int encola, int size, int tam,int final)
     
     if ((isFull(colac,encola))!=1){
         for(int i=0; i<encola; i++){
-            printf("\nIngresa el valor %d :   ",i+1);
+            printf("\n\nIngresa el valor %d :   ",i+1);
             scanf("%d",&colac->datos[i]);
             
             colac->final++;
-            size+=1;
-            tam++;
+            colac->size++;
+            colac->tam++;
         }
+        //La siguiente linea fue para er como se complrtan los contadores
+        //printf("size=%d, final=%d, tam=%d",colac->size,colac->final,colac->tam);
     }
     else{
         printf("\nNo se pueden agregar mas elementos, cola llena ");
@@ -55,7 +57,7 @@ int enqueue(struct ColaCircular *colac, int encola, int size, int tam,int final)
 
 
 int dequeue(struct ColaCircular *colac,int desencola,int frente,int size, int tam) {
-    isEmpty(colac,size);
+    
     
     if ((isEmpty(colac,desencola))!=1){
         printf("\nNo se pueden eliminar elementos de una cola vacia ");
@@ -74,7 +76,8 @@ int dequeue(struct ColaCircular *colac,int desencola,int frente,int size, int ta
 
 
 int peek (struct ColaCircular *colac){
-    return colac->datos[colac->frente];
+    printf("Peek: %d",colac->datos[colac->frente]);
+    return 0;
 }
 
 
@@ -107,6 +110,7 @@ int main()
     printf("\n 4)Dequeue ");
     printf("\n 5)peek ");
     printf("\n 6)PrintQueue ");
+    printf("\nIngrese la opcion:   ");
     scanf("%d",&opc);
     
     switch(opc) {
@@ -121,7 +125,7 @@ int main()
         
         case 3:
         int encola;
-        printf("ingresa cuantso elementos deseas encolar: ");
+        printf("\nIngresa cuantso elementos deseas encolar: ");
         scanf("%d",&encola);
         if(encola<=MAX) {
             enqueue(&colac,encola,colac.size,colac.tam,colac.final);
@@ -161,7 +165,7 @@ int main()
         printf("\nOpcion invalida ");
         return 0;
     }
-    printf("\n\nIngrese 1 para continuar, ingrese otro caracter para salir");
+    printf("\n\nIngrese 1 para continuar, ingrese otro caracter para salir:   ");
     scanf("%d",&continua);
     } while(continua==1);
     return 0;
